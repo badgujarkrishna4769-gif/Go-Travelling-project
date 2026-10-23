@@ -62,8 +62,8 @@ app.use((error, req, res, next) => {
 });
 
 
-const PORT       = process.env.PORT       || 5000;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://rohit:RawKRISHak47@ac-sdsrr0p-shard-00-00.iecozmh.mongodb.net:27017,ac-sdsrr0p-shard-00-01.iecozmh.mongodb.net:27017,ac-sdsrr0p-shard-00-02.iecozmh.mongodb.net:27017/?ssl=true&replicaSet=atlas-l6qmqd-shard-0&authSource=admin&appName=GoCluster";
+const PORT = process.env.PORT;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose
   .connect(MONGODB_URI)
