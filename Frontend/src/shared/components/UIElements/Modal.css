@@ -1,0 +1,81 @@
+/* Modal Container */
+.modal {
+  z-index: 100;
+  position: fixed;
+  top: 20vh;
+  left: 10%;
+  width: 80%;
+
+  /* UPDATED */
+  background: linear-gradient(135deg, #ffffff, #ecfdf5);
+
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+}
+
+/* Header */
+.modal__header {
+  width: 100%;
+  padding: 1rem 1rem;
+
+  /* UPDATED */
+  background: linear-gradient(135deg, #166534, #22c55e);
+
+  color: #f0fdf4;
+}
+
+.modal__header h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Content */
+.modal__content {
+  padding: 1.2rem 1rem;
+
+  /* UPDATED */
+  color: #1f2933;
+
+  line-height: 1.5;
+}
+
+/* Footer */
+.modal__footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .modal {
+    left: calc(50% - 22rem);
+    width: 44rem;
+  }
+}
+
+/* Animations */
+.modal-enter {
+  transform: translateY(-3rem) scale(0.95);
+  opacity: 0;
+}
+
+.modal-enter-active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: all 300ms ease;
+}
+
+.modal-exit {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.modal-exit-active {
+  transform: translateY(-2rem) scale(0.95);
+  opacity: 0;
+  transition: all 250ms ease;
+}

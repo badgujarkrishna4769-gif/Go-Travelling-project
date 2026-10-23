@@ -1,0 +1,33 @@
+.avatar {
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+/* Avatar Image */
+.avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+
+  /* subtle border ring */
+  border: 3px solid #ffffff;
+
+  /* soft shadow for depth */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* smooth hover */
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.avatar img:hover {
+  transform: scale(1.05);
+
+  /* UPDATED */
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.3);
+}

@@ -1,0 +1,55 @@
+.image-upload.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Image Preview Container */
+.image-upload__preview {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 16px;
+
+  /* UPDATED */
+  border: 2px dashed rgba(34, 197, 94, 0.4);
+
+  /* UPDATED */
+  background: linear-gradient(135deg, #ffffff, #ecfdf5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover effect */
+.image-upload__preview:hover {
+  transform: translateY(-3px);
+
+  /* UPDATED */
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.2);
+
+  /* UPDATED */
+  border-color: #22c55e;
+}
+
+/* Image Styling */
+.image-upload__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Placeholder text */
+.image-upload__preview p {
+  color: #6b7280; /* slightly refined neutral */
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}

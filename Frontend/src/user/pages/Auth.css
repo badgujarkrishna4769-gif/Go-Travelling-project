@@ -1,0 +1,122 @@
+/* Header (Login / Signup title) */
+.authentication__header {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  /* gradient text */
+  background: linear-gradient(135deg, #28a745, #20c997);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 1rem;
+}
+
+/* Main container */
+.authentication {
+  width: 90%;
+  max-width: 26rem;
+  margin: 8rem auto;
+  text-align: center;
+
+  /* card style */
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, #ffffff, #f3fff6);
+
+  box-shadow: 0 12px 30px rgba(0, 128, 0, 0.1);
+}
+
+/* Form spacing */
+.authentication form {
+  margin-bottom: 1.2rem;
+}
+
+/* Optional: smooth entrance */
+.authentication {
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Email verification status */
+.auth__email-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin: -0.5rem 0 0.75rem;
+}
+
+.auth__email-status p { margin: 0; }
+
+.auth__email-status--checking {
+  background: #fefce8;
+  color: #854d0e;
+  border: 1px solid #fde047;
+}
+
+.auth__email-status--valid {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.auth__email-status--invalid {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Spinner for checking state */
+.auth__email-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fde047;
+  border-top-color: #854d0e;
+  border-radius: 50%;
+  animation: authSpin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes authSpin {
+  to { transform: rotate(360deg); }
+}
+
+.password-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.show-password-btn {
+  height: 38px;
+  width: 15%;
+  outline: none;
+  background-color: #2cc263;
+  transform: translateY(10px);
+  border: 1px solid grey;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-password-btn:hover {
+  border-color: #22c55e;
+  background-color: #33eb77;
+}

@@ -1,0 +1,83 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Theme Variables */
+:root {
+  --primary-gradient: linear-gradient(135deg, #28a745, #20c997);
+  --primary-color: #28a745;
+  --secondary-color: #198754;
+
+  --text-dark: #333;
+  --text-light: #ffffff;
+
+  --bg-light: #ffffff;
+  --bg-soft: #f3fff6;
+
+  --shadow-soft: 0 6px 18px rgba(0, 128, 0, 0.08);
+}
+
+/* Base Typography */
+html {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  /* vibrant subtle background */
+  background: linear-gradient(135deg, #f6fff8, #e6f4ea);
+
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth page feel */
+main {
+  min-height: 100vh;
+}
+
+/* Slide animation (drawer etc.) */
+.slide-in-left-enter {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-in-left-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 300ms ease;
+}
+
+.slide-in-left-exit {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.slide-in-left-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 300ms ease;
+}
+
+/* Utility: Center content */
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Utility: Section spacing */
+.section {
+  padding: 2rem 1rem;
+}
+
+/* Utility: Max width container */
+.container {
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+}

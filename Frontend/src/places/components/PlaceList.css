@@ -1,0 +1,102 @@
+/* ── Empty state ── */
+.pl-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  min-height: 60vh;
+  background: #f0fdf4;
+}
+
+.pl-empty__icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+.pl-empty__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #14532d;
+  margin: 0 0 0.5rem;
+}
+
+.pl-empty__sub {
+  font-size: 0.95rem;
+  color: #6b7280;
+  max-width: 380px;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+/* ── Wrapper ── */
+.pl-wrapper {
+  background: #f0fdf4;
+  min-height: 100vh;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Header bar ── */
+.pl-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #bbf7d0;
+  max-width: 680px;        /* ← matches card width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pl-header__left {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.pl-header__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #14532d;
+  margin: 0;
+}
+
+.pl-header__count {
+  font-size: 0.9rem;
+  color: #6b7280;
+  background: #dcfce7;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* ── Stack — one card per row, centered ── */
+.pl-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 680px;        /* ← card never wider than this */
+  display: flex;
+  flex-direction: column;  /* ← stacked vertically */
+  gap: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pl-wrapper       { padding: 1.5rem 1rem 3rem; }
+  .pl-header        { max-width: 100%; }
+  .pl-header__title { font-size: 1.4rem; }
+  .pl-grid          { max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .pl-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}

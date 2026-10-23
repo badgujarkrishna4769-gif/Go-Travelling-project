@@ -1,0 +1,25 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  /* softer dark overlay */
+  background: rgba(20, 20, 30, 0.55);
+
+  /* subtle blur for modern feel */
+  backdrop-filter: blur(4px);
+
+  z-index: 50;
+
+  /* smooth fade animation */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Optional states for animation */
+.backdrop.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
